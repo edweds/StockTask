@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StockTask"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="400" Width="500">
     <Grid>
+        <DataGrid x:Name="gridReceivedGoods" Margin="10,10,10,72"/>
+        <Button x:Name="bttnCreate" Content="Создать новую запись" HorizontalAlignment="Center" Margin="0,331,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
 
     </Grid>
 </Window>
