@@ -2,14 +2,13 @@
 
 namespace StockTask.Domain.Models
 {
-    public class SoldItem
+    public class SoldItem:TableDomainObject
     {
-        public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime SoldDate
+        public DateTime SoldDate { get; private set; }
+        public SoldItem()
         {
-            get { return SoldDate; }
-            set { SoldDate = DateTime.Now; }
+            SoldDate = DateTime.Now;
         }
     }
 }

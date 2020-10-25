@@ -4,11 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StockTask"
+        xmlns:controls="clr-namespace:StockTask.WPF.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="500">
+        Title="StockApp" Height="400" Width="500">
     <Grid>
-        <DataGrid x:Name="gridReceivedGoods" Margin="10,10,10,72"/>
-        <Button x:Name="bttnCreate" Content="Создать новую запись" HorizontalAlignment="Center" Margin="0,331,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
-
+        <controls:NavigationBar/>
     </Grid>
 </Window>

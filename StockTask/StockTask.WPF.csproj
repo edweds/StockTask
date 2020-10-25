@@ -10,4 +10,13 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StockTask.Domain\StockTask.Domain.csproj" />
+    <ProjectReference Include="..\StockTask.EntityFramework\StockTask.EntityFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
+
 </Project>

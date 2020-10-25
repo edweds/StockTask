@@ -2,14 +2,13 @@
 
 namespace StockTask.Domain.Models
 {
-    public class ToStockItem
+    public class ToStockItem:TableDomainObject
     {
-        public int Id { get; set; }
         public string Name { get; }
-        public DateTime ToStockTime 
-        { 
-            get { return ToStockTime; } 
-            set { ToStockTime = DateTime.Now; } 
+        public DateTime ToStockTime { get; private set; }
+        public ToStockItem()
+        {
+            ToStockTime = DateTime.Now;
         }
     }
 }

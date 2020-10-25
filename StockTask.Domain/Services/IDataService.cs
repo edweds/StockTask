@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace StockTask.Domain.Services
 {
-    interface IDataService <T>
+    public interface IDataService <T>
     {
         Task<IEnumerable <T>> GetAll();
         Task<T> Get(int id);
