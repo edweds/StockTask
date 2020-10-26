@@ -1,17 +1,30 @@
 ﻿using StockTask.WPF.Commands;
+using StockTask.WPF.Models;
 using StockTask.WPF.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using System.Windows.Input;
 
 namespace StockTask.WPF.State.Navigators
 {
-    public class Navigator : Inavigator
+    public class Navigator : ObservableObject, Inavigator
     {
-        
-        public ViewModelBase CurrentViewModel { get; set; }
+        private ViewModelBase _currentViewModel;
+        public ViewModelBase CurrentViewModel
+        {
+            get
+            {
+                return _currentViewModel;
+            }
+            set 
+            {
+                _currentViewModel = value;
+                OnPropertyChanged(nameof(CurrentViewModel));
+            }
+        }
 
-        public ICommand UpdateCurrentViewModelCommand => new UpdateCurrentViewModelCommand(this);
+        public ICommand UpdateCurrentViewModelCommand => new UpdateCurrentViewModelCommand(this);    
     }
 }

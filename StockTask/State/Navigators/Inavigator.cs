@@ -6,15 +6,15 @@ using System.Windows.Input;
 
 namespace StockTask.WPF.State.Navigators
 {
+    public enum ViewType
+    {
+        Received,
+        Stock,
+        Sold,
+        Report
+    }
     public interface Inavigator
     {
-        public enum ViewType
-        {
-            Received,
-            Stock,
-            Sold,
-            Report
-        }
         ViewModelBase CurrentViewModel { get; set; }
         ICommand UpdateCurrentViewModelCommand { get; }
     }

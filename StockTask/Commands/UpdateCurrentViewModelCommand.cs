@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
+using static StockTask.WPF.State.Navigators.Inavigator;
 using static StockTask.WPF.State.Navigators.Navigator;
 
 namespace StockTask.WPF.Commands
 {
-    class UpdateCurrentViewModelCommand : ICommand
+    public class UpdateCurrentViewModelCommand : ICommand
     {
         public event EventHandler CanExecuteChanged;
 
@@ -26,7 +27,7 @@ namespace StockTask.WPF.Commands
 
         public void Execute(object parameter)
         {
-           if(parameter is ViewType)
+            if (parameter is ViewType)
             {
                 ViewType viewType = (ViewType)parameter;
                 switch (viewType)

@@ -8,6 +8,12 @@
         mc:Ignorable="d"
         Title="StockApp" Height="400" Width="500">
     <Grid>
-        <controls:NavigationBar/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <controls:NavigationBar Grid.Row="0" DataContext="{Binding Navigator}"/>
+        <ContentControl Grid.Row="1" Content="{Binding Naigator.CurrentViewModel}"/>
     </Grid>
 </Window>
